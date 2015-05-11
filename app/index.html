@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Open Weather Map App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    
+    <!-- <link href="style.css" rel="stylesheet" type="text/css"> -->
+
+</head>
+
+<body ng-app="OWMApp">
+	<a href="#/cities/New_York">New York</a>
+    <a href="#/cities/Dallas">Dallas</a>
+    <a href="#/cities/Chicago">Chicago</a>
+    <div ng-view></div>
+
+    
+
+    <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="owm-app.js"></script>
+</body>
+</html>

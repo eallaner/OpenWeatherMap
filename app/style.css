@@ -1,0 +1,236 @@
+@charset "utf-8";
+
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/*Specific css rules*/
+body{
+	background-image:url(background.jpg);
+}
+
+.main h1, h2, p, input{
+	font-family: 'Philosopher', sans-serif;
+}
+
+.main h1{
+	font-size:1.4em;
+	font-weight:500;
+	color:#000;
+	text-align:center;
+	padding-top:1em;
+	padding-bottom: 0.5em;
+	text-shadow: -1px -1px 1px #630, 1px 1px 1px #960;
+	-webkit-transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+.main h1:hover{
+	text-shadow: 0 1px 3px #C99, 0 2px 4px #C96, 0 3px 5px #C93, 0 4px 6px #C90;
+	cursor: default;
+}
+
+.main h2{
+	font-size:1.2em;
+	font-weight:800;
+	color:#000;
+	text-align:center;
+	padding-top:1em;
+	padding-bottom:1em;
+}
+
+.main .results img{
+    margin-bottom: 1em;
+    -webkit-transition: 0.3s ease-out;
+    -moz-transition:  0.3s ease-out;
+    -o-transition:  0.3s ease-out;
+    transition:  0.3s ease-out;
+    opacity:1;
+}
+
+.main .results img:hover{
+    opacity:0.9;
+    background-color: rgba(102,51,0,0.7);
+}
+
+.main form{
+    top: 20em;
+}
+
+.main form input{
+	font-size:1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding-top: 0.4em;
+	padding-bottom: 0.4em;
+
+}
+
+.main form input:focus{
+	background-color:rgba(255,255,255,0.8);
+	border-color:rgba(204,51,0,1);
+    box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.1) inset, 0 0 0.5em rgba(204,51,0,1);
+    outline: 0 none;
+}
+
+/*----button styling----*/
+.main form #submit{
+   margin-left:0.5em;
+   margin-top: 1em;
+   position: relative;
+   text-decoration: none;
+   background: rgba(255,153,51,1);
+   overflow: hidden;
+   border-style: inset;
+   border-color: rgba(102,0,0,0.4);
+   border-width: 0.2em;
+}
+
+.main form #submit:focus{
+	outline: 0 none;
+}
+
+
+
+.main form #submit .txt{
+	font-family: 'Philosopher', sans-serif;
+    position: relative;
+    font-size: 1em;
+    font-weight: 700;
+    color:rgba(102,0,0,1);
+    z-index: 6;
+}
+
+@media screen and (max-width: 450px){
+    .main form #submit .txt{
+        font-size: 0.8em;
+    }
+}
+
+
+/*------    Layer 1    ------*/
+.main form #submit .layer-1{
+    position: absolute;
+    z-index: 4;
+    background: #f57a3d;
+
+    /*  transition: <property> <duration> <timing-function> <delay>;  */
+    -webkit-transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0.2s;
+    -moz-transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0.2s;
+    -o-transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0.2s;
+    transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0.2s;
+}
+
+.main form #submit:hover .layer-1{
+
+    -webkit-transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0.2s;
+    -moz-transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0.2s;
+    -o-transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0.2s;
+    transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0.2s;
+
+}
+
+.main form #submit .layer-1,
+.main form #submit .layer-2,
+.main form #submit .layer-3{
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+}
+
+.main form #submit:hover .layer-1,
+.main form #submit:hover .layer-2,
+.main form #submit:hover .layer-3{
+    width: 100%;
+}
+
+/*------    Layer 2    ------*/
+.main form #submit .layer-2{
+    position: absolute;
+    z-index: 3;
+    background: #cc5b22;
+
+    -webkit-transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0.3s;
+    -moz-transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0.3s;
+    -o-transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0.3s;
+    transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0.3s;
+}
+
+.main form #submit:hover .layer-2{
+    -webkit-transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0.1s;
+    -moz-transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0.1s;
+    -o-transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0.1s;
+    transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0.1s;
+
+}
+
+
+/*------    Layer 3    ------*/
+.main form #submit .layer-3{
+    position: absolute;
+    z-index: 2;
+    background: #f2d466;
+
+    -webkit-transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0.4s;
+    -moz-transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0.4s;
+    -o-transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0.4s;
+    transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0.4s;
+}
+
+.main form #submit:hover .layer-3{
+    -webkit-transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0s;
+    -moz-transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0s;
+    -o-transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0s;
+    transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1) 0s;
+
+}
+
